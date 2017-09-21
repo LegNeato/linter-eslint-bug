@@ -1,0 +1,21 @@
+__GENERATED__
+.DS_Store
+.env
+node_modules
+npm-debug.log
+server/database/schema.graphql
+build/*
+public/build/*
+*.sw[a-z]
+*.rdb
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+# Terraform
+ops/terraform/*/.terraform
+
+*~
+# Push
+appspec.yml
+release.txt

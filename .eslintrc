@@ -1,0 +1,85 @@
+---
+parser: babel-eslint
+
+plugins:
+  - react
+  - babel
+  - flowtype
+  - prettier
+  - whatever
+
+env:
+  es6: true
+  jest: true
+
+extends:
+  - plugin:react/recommended
+  - prettier
+  - prettier/flowtype
+  - prettier/react
+
+parserOptions:
+  ecmaVersion: 7
+  sourceType: "module"
+  ecmaFeatures:
+    arrowFunctions: true
+    blockBindings: true
+    classes: true
+    destructuring: true
+    generators: true
+    modules: true
+    spread: true
+    suprtInFunctions: true
+    templateStrings: true
+
+
+rules:
+  accessor-pairs: 0
+  array-bracket-spacing: 1
+  brace-style: [2, 1tbs]
+  comma-dangle: [2, always-multiline]
+  consistent-return: 2
+  dot-location: [2, property]
+  dot-notation: 2
+  eol-last: 2
+  jsx-quotes: [2, prefer-double]
+  no-bitwise: 0
+  no-alert: 2
+  no-await-in-loop: 1
+  no-debugger: 2
+  no-dupe-class-members: 2
+  no-multi-spaces: 2
+  no-restricted-syntax: [2, WithStatement]
+  no-shadow: 2
+  no-unused-expressions: 2
+  no-unused-vars: [2, {args: none, varsIgnorePattern: ^_}]
+  no-var: 2
+  object-shorthand: 1
+  quotes: [2, single, {"avoidEscape": true, "allowTemplateLiterals": true}]
+  keyword-spacing: 2
+  space-before-blocks: 2
+  strict: [2, global]
+  semi: 2
+
+  # React and JSX config that is not recommended
+  react/prop-types: 0
+  react/display-name: 0
+
+  # eslint-plugin-babel
+  babel/generator-star-spacing: 0
+  babel/new-cap: 1
+  babel/object-curly-spacing: [1, "always"]
+  # babel/arrow-parens: [1, "as-needed"]
+
+  # eslint-plugin-flowtype
+  flowtype/space-after-type-colon: [1, "always", { "allowLineBreak": true }]
+  flowtype/define-flow-type: 1
+  flowtype/object-type-delimiter: 1
+  flowtype/use-flow-type: 1
+
+  # eslint-plugin-prettier
+  prettier/prettier: ["error", {parser: "flow", "trailingComma": "all", "singleQuote": true}]
+
+  # CUSTOM RULES
+  # Never use process.env.NODE_ENV directly.
+  whatever/no-node_env: 2
